@@ -1,0 +1,85 @@
+/**
+ * @name Forest Leaves
+ * @author vizthefemboygooner3000-sketch
+ * @description Dark Discord theme using the exact Forest Leaves wallpaper.
+ * @version 1.1.0
+ */
+
+/* Replace YOUR_USERNAME with your GitHub username.
+   The repository name below is forest-leaves-vencord. */
+
+:root {
+    --forest-text: #e1e8df;
+    --forest-muted: #a3afa1;
+    --forest-accent: #879b80;
+    --forest-border: rgba(145, 163, 143, 0.16);
+}
+
+/* Exact uploaded wallpaper — no tint or gradient overlay. */
+#app-mount {
+    background-color: #343b35;
+    background-image: url("https://cdn.jsdelivr.net/gh/vizthefemboygooner3000-sketch/forest-leaves-vencord@main/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.theme-dark {
+    --background-primary: rgba(28, 34, 29, 0.34);
+    --background-secondary: rgba(23, 29, 24, 0.72);
+    --background-secondary-alt: rgba(19, 25, 20, 0.82);
+    --background-tertiary: rgba(15, 20, 16, 0.90);
+    --background-floating: rgba(23, 29, 24, 0.96);
+    --background-modifier-hover: rgba(150, 170, 145, 0.09);
+    --background-modifier-selected: rgba(150, 170, 145, 0.15);
+    --background-modifier-accent: var(--forest-border);
+    --text-normal: var(--forest-text);
+    --text-muted: var(--forest-muted);
+    --header-primary: #edf2eb;
+    --header-secondary: #b3beb0;
+    --interactive-normal: #c0cbbd;
+    --interactive-hover: #edf2eb;
+    --interactive-active: #ffffff;
+    --brand-experiment: var(--forest-accent);
+}
+
+/* Allow the wallpaper to remain visible behind Discord surfaces. */
+body,
+#app-mount {
+    background-color: transparent;
+}
+
+/* Translucent dark-green surfaces. */
+[class*="sidebar"],
+[class*="chat"],
+[class*="members"],
+[class*="panels"],
+[class*="guilds"],
+[class*="container"] {
+    backdrop-filter: blur(8px);
+}
+
+[class*="chatContent"],
+[class*="membersWrap"],
+[class*="privateChannels"],
+[class*="panels"] {
+    background-color: rgba(20, 26, 21, 0.48);
+}
+
+/* Message composer. */
+[class*="channelTextArea"],
+[class*="scrollableContainer"] {
+    background: rgba(18, 24, 19, 0.88);
+    border: 1px solid var(--forest-border);
+    border-radius: 12px;
+}
+
+/* Scrollbars. */
+::-webkit-scrollbar-thumb {
+    background: rgba(133, 154, 127, 0.35) !important;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(155, 177, 148, 0.55) !important;
+}
